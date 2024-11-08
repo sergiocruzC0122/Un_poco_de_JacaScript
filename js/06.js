@@ -13,10 +13,4 @@ resultado = Math.max( 3, 2, 10, 8, 9, 15); //Devuelve el numero meyor
 resultado = Math.random();//genera un numero ramdom
 resultado = Math.floor(Math.random() * 30); //Redondea al menor el numero generado por random y multiplicado por 30
 
-
-
-
-
-
-
 console.log(resultado);
