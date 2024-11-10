@@ -1,4 +1,17 @@
+//Arrow function
+
+
+// const suma2 = (n1 , n2) => console.log(n1 + n2);
+// suma2(5 , 10);
+
+// const aprendiendo = tecnologia => console.log(`Aprendiendo ${tecnologia}`);
+// aprendiendo('JavaScript'); 
+
+
 //Arrays methods
+
+let resultado;
+let total = 0;
 
 const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo'];
 
@@ -13,37 +26,14 @@ const carritoCompras = [
     {producto : 'Celular', precio : 400 },
 ];
 
-meses.forEach( function(mes){
+meses.forEach( mes => {
     if(mes == 'enero'){
         console.log(`${mes} si se encuentra en el Array`);
     }
 });
 
-//includes
-
-let resultado = meses.includes('abril');
-console.log(resultado);
-
-//some ideal para el arreglo de objetos
-resultado = carritoCompras.some(function(carrito) {
-    return carrito.producto === 'Celular'
-});
-    
-//Reduce
-resultado = carritoCompras.reduce(function(total , carrito){
-    return total + carrito.precio
-}, 0),
-
-
-// filter
-resultado = carritoCompras.filter(function(carrito) {
-    return carrito.precio > 400
-});
-
-console.log(resultado);
-
-resultado = carritoCompras.filter(function(carrito) {
-    return carrito.producto !== 'Celular'
-});
-
+resultado = carritoCompras.some( carrito => carrito.producto === 'Celular' );
+resultado = carritoCompras.reduce( (total , carrito) => total + carrito.precio, 0);
+resultado = carritoCompras.filter( carrito => carrito.precio > 400);
+resultado = carritoCompras.filter( carrito => carrito.producto !== 'Celular' );
 console.log(resultado);
